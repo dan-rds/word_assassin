@@ -2,17 +2,29 @@
     <Page>
         <ActionBar title="Welcome to NativeScript-Vue!"/>
         <GridLayout columns="*" rows="*">
-            <Label class="message" :text="msg" col="0" row="0"/>
+            <!-- <Label class="message" :text="msg" col="0" row="0"/> -->
+            <Button :text="this.getCounter" @tap="this.increment" />
         </GridLayout>
     </Page>
 </template>
 
 <script>
-  export default {
+import {mapGetters, mapMutations} from 'vuex'
+export default {
     data() {
       return {
         msg: 'Hello World!'
       }
+    },
+    computed: {
+        ...mapGetters([
+            'getCounter',
+        ])
+    },
+    methods: {
+        ...mapMutations([
+            'increment'
+        ])
     }
   }
 </script>
