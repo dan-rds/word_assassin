@@ -13,9 +13,16 @@
     "storage": false,
     "functions": true,
     "facebook_auth": false,
+<<<<<<< HEAD
     "google_auth": true,
     "admob": false,
     "invites": true,
     "dynamic_links": true,
+=======
+    "google_auth": false,
+    "admob": false,
+    "invites": false,
+    "dynamic_links": false,
+>>>>>>> ce9c9528aa7242a45b8baaca6c349722ef28a2b1
     "ml_kit": false
 }

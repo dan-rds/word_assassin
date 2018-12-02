@@ -3,8 +3,8 @@
         <ActionBar title="Welcome to NativeScript-Vue!"/>
         <GridLayout columns="*" rows="*">
             <!-- <Label class="message" :text="msg" col="0" row="0"/> -->
-            <Button :text="this.getCounter" @tap="this.increment" />
-            <Button text="Button Test ________" @tap="firebase.init" />
+
+            <Button :text="this.getCounter" @tap="test()" />
         </GridLayout>
     </Page>
 </template>
@@ -12,6 +12,8 @@
 <script>
 import {mapGetters, mapMutations} from 'vuex'
 
+import * as firebase from "nativescript-plugin-firebase";
+import { firestore } from "nativescript-plugin-firebase";
 
 export default {
     data() {
@@ -29,8 +31,12 @@ export default {
             'increment'
         ]),
 
-
-        
+        test: function() {
+            console.log("_*_*_*_*_*_*")
+            firebase.firestore.collection('test').add({
+                test:'asd'
+            })
+        }
     }
   }
 </script>
