@@ -4,12 +4,15 @@
         <GridLayout columns="*" rows="*">
             <!-- <Label class="message" :text="msg" col="0" row="0"/> -->
             <Button :text="this.getCounter" @tap="this.increment" />
+            <Button text="Button Test ________" @tap="firebase.init" />
         </GridLayout>
     </Page>
 </template>
 
 <script>
 import {mapGetters, mapMutations} from 'vuex'
+
+
 export default {
     data() {
       return {
@@ -24,7 +27,10 @@ export default {
     methods: {
         ...mapMutations([
             'increment'
-        ])
+        ]),
+
+
+        
     }
   }
 </script>
