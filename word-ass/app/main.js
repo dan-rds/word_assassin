@@ -12,6 +12,10 @@ Vue.use(Vuex)
 firebase.init({
   // Optionally pass in properties for database, authentication and cloud messaging,
   // see their respective docs.
+    "using_ios": true,
+    "firestore": true,
+
+
 }).then(
     function (instance) {
       console.log("firebase.init done");
